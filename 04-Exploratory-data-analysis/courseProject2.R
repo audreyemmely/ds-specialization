@@ -48,7 +48,7 @@ coalRelated <- grepl("coal", SCC[, SCC.Level.Four], ignore.case=TRUE)
 combustionSCC <- SCC[combustionRelated & coalRelated, SCC]
 combustionNEI <- NEI[NEI[,SCC] %in% combustionSCC]
 
-png("courseProjetc2Plot4.png")
+png("courseProject2Plot4.png")
 
 ggplot(combustionNEI,aes(x = factor(year),y = Emissions/10^5)) +
   geom_bar(stat="identity", fill ="#FF9999", width=0.75) +
